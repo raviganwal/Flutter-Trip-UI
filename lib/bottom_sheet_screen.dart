@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sample_trip/slide_page.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
-class Home extends StatefulWidget {
+class BottomSheetScreen extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _BottomSheetScreenState createState() => _BottomSheetScreenState();
 }
 
-class _HomeState extends State<Home> {
+class _BottomSheetScreenState extends State<BottomSheetScreen> {
   @override
   void initState() {
     super.initState();

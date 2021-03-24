@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sample_trip/home.dart';
+import 'package:sample_trip/bottom_sheet_screen.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
+      home: BottomSheetScreen(),
     );
   }
 }
