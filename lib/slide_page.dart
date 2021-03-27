@@ -35,18 +35,10 @@ class _SlidePageState extends State<SlidePage>
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
+        height:  MediaQuery.of(context).size.height*.55,
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              height: 5,
-              width: 100,
-              decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
-                  borderRadius: BorderRadius.all(Radius.circular(20))
-              ),
-            ),
             Padding(
               padding: EdgeInsets.only(top: 20.0),
               child: _buildMenuBar(context),

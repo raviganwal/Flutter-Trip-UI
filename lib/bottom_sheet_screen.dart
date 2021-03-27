@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample_trip/slide_page.dart';
-import 'package:sliding_up_panel/sliding_up_panel.dart';
+
 class BottomSheetScreen extends StatefulWidget {
   @override
   _BottomSheetScreenState createState() => _BottomSheetScreenState();
@@ -13,23 +13,23 @@ class _BottomSheetScreenState extends State<BottomSheetScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Material(
-      child: SlidingUpPanel(
-        backdropEnabled: false,
-        defaultPanelState: PanelState.OPEN,
-        borderRadius: BorderRadius.all(Radius.circular(30)),
-        panel: Center(
-          child: SlidePage(),
-        ),
-        body: Scaffold(
-          body:  Container(
+  Widget build(BuildContext co0ntext) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: double.infinity,
             color: Colors.brown.shade50,
-            child: Center(
-              child: Text("add your MAP here"),
+            child: Image.network(
+              "https://www.dsdinc.com/wp-content/uploads/2017/08/map-placeholder.jpg",
+              fit: BoxFit.cover,
             ),
           ),
-        ),
+          Positioned(
+              bottom: 0,
+              child: Container(color: Colors.grey.shade50, child: SlidePage())),
+        ],
       ),
     );
   }
